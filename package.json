@@ -30,7 +30,10 @@
     "bower": "^1.8.4",
     "colors": "*",
     "grunt-cli": "^1.2.0",
-    "underscore": "1.5.x"
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "underscore": "1.5.x",
+    "webrtc-adapter": "^6.1.5"
   },
   "analyze": false,
   "license": "BSD-2-Clause",
