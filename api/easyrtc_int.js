@@ -34,30 +34,30 @@
 */
 
 (function (root, factory) {
-    try {
+    // try {
 
         
-        if (typeof define === 'function' && define.amd) {
-            //RequireJS (AMD) build system
-            console.log("RequireJS (AMD) build system");
+    //     if (typeof define === 'function' && define.amd) {
+    //         //RequireJS (AMD) build system
+    //         console.log("RequireJS (AMD) build system");
             define(['easyrtc_lang', 'webrtc-adapter', 'socket.io'], factory);
-        } else if (typeof module === 'object' && module.exports) {
-            //CommonJS build system
-            console.log("CommonJS build system");
-            module.exports = factory(require('easyrtc_lang'), require('webrtc-adapter'), require('socket.io'));
-        } else {
-            //Vanilla JS, ensure dependencies are loaded correctly
-            console.log("Vanilla JS, ensure dependencies are loaded correctly");
-            if (typeof window.io === 'undefined' || !window.io) {
-                throw new Error("easyrtc requires socket.io");
-            }
-            root.easyrtc = factory(window.easyrtc_lang, window.adapter, window.io);
-    }
-    }
-    catch (e) {
-        console.log(e);
-        root.easyrtc = factory(window.easyrtc_lang, window.adapter, window.io);
-    }
+    //     } else if (typeof module === 'object' && module.exports) {
+    //         //CommonJS build system
+    //         console.log("CommonJS build system");
+    //         module.exports = factory(require('easyrtc_lang'), require('webrtc-adapter'), require('socket.io'));
+    //     } else {
+    //         //Vanilla JS, ensure dependencies are loaded correctly
+    //         console.log("Vanilla JS, ensure dependencies are loaded correctly");
+    //         if (typeof window.io === 'undefined' || !window.io) {
+    //             throw new Error("easyrtc requires socket.io");
+    //         }
+    //         root.easyrtc = factory(window.easyrtc_lang, window.adapter, window.io);
+    // }
+    // }
+    // catch (e) {
+    //     console.log(e);
+        // root.easyrtc = factory(window.easyrtc_lang, window.adapter, window.io);
+    // }
 }(this, function (easyrtc_lang, adapter, io, undefined) {
 
 "use strict";
